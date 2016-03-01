@@ -23,6 +23,7 @@ html, body {
 
 .left textarea {
   font-size: .75em;
+  font-family: monospace;
   height: 85%;
   width: 100%;
   display: block;
