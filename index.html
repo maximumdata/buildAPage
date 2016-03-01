@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>day 13</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="//code.jquery.com/jquery-2.2.1.min.js" charset="utf-8"></script>
+  <style id="output">
+
+  </style>
+</head>
+<body>
+
+<div class="left">
+  <h1>Input:</h1>
+  <div class="css">
+    <textarea name="css" id="css" placeholder="Enter your css here!"></textarea>
+    <input id="csssub" type="submit">
+  </div>
+  <div class="html">
+    <div class="sub">
+      <textarea name="h1html" id="h1html" placeholder="Enter the HTML for the heading tag here!"></textarea>
+      <input type="submit" id="h1sub">
+    </div>
+    <div class="sub">
+      <textarea name="mainhtml" id="mainhtml" placeholder="Enter the HTML for the main section here!"></textarea>
+      <input type="submit" id="mainsub">
+    </div>
+  </div>
+</div>
+<div class="right">
+  <h1>Output:</h1>
+  <div class="sample">
+    <div class="header"><h1>Heading! (class = 'header')</h1></div>
+    <div class="main">
+      Main section!
+      <br>(class = 'main')
+    </div>
+  </div>
+  <button id="save">Save</button>
+</div>
+
+<script>
+$(document).ready(function() {
+  $('#csssub').click(function(event) {
+    event.preventDefault();
+    $('#output').text($('#css').val());
+  });
+
+  $('#h1sub').click(function(event) {
+    event.preventDefault();
+    $('.header').html($('#h1html').val());
+  });
+
+  $('#mainsub').click(function(event) {
+    event.preventDefault();
+    $('.main').html($('#mainhtml').val());
+  });
+});
+</script>
+</body>
+</html>
